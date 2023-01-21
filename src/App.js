@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Liquor from './components/liquor';
+import Home from './components/home';
+import Help from './components/help';
+import Generator from './components/generator';
+import Random from './components/random';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='App'>
+        <Router>
+          <div>
+          <NavBar />         
+          <Routes>
+            <Route exact path='/' element={<Home/>}></Route>
+            <Route exact path='/liquor' element={<Liquor />}/>
+            <Route exact path='/help' element={<Help />}/>
+            <Route exact path='/generator' element={<Generator />}/>
+            <Route exact path='/random'
+            element={<Random/>} />
+          </Routes>
+          </div>
+        </Router>
+      </div>
   );
 }
 
