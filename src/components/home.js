@@ -8,7 +8,7 @@ function Home () {
                 <h1 style={{color: 'white', backgroundColor: '#FEAA01', marginBottom: 0}}>Cocktail Generator</h1>
                 <img className="homeimg" src={cocktail} />
                 <div className="homebttns">
-                    <Link to='/random'>
+                    <Link to='/Cocktail-Generator/random'>
                         <Button className='randombttn' variant="warning">Random</Button>{''}
                     </Link>
                     <Link to="/generator">

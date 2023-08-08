@@ -19,7 +19,7 @@ function App() {
             <Route exact path='/liquor' element={<Liquor />}/>
             <Route exact path='/help' element={<Help />}/>
             <Route exact path='/generator' element={<Generator />}/>
-            <Route exact path='/random' element={<Random/>} />
+            <Route exact path='/Cocktail-Generator/random' element={<Random/>} />
           </Routes>
           </div>
         </Router>
